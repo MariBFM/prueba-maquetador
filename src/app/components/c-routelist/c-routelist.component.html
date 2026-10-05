@@ -1,0 +1,301 @@
+<section
+  class="c-routelist my-[72px] mx-auto lg:max-w-[1128px] md:max-w-[840px] sm:max-w-[552px] max-w-[90%] grid gap-[24px] align-start lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1"
+>
+  <button class="btn btn-filters flex col-span-full" (click)="openFilters()">
+    <i class="icon icon-filters"></i>
+    Ver filtros
+  </button>
+  <aside
+    class="c-routelist__filter lg:row-start-2 lg:col-span-1 lg:row-span-full bg-secondary-050"
+    [class.open]="isFiltersOpen"
+  >
+    <div class="c-routelist__filter-title text-center">
+      Filtrar mi búsqueda
+      <button (click)="closeFilters()"><i class="icon icon-close lg:hidden"></i></button>
+    </div>
+    <form class="c-routelist__filter-form" action="">
+      <div class="c-routelist__filter-section">
+        <div class="c-routelist__filter-selector">
+          <i class="icon icon-world"></i>
+          Destinos
+          <i class="icon icon-arrow-right"></i>
+        </div>
+        <div class="c-routelist__filter-section-form">
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Marruecos</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Egipto</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Madagascar</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="c-routelist__filter-section active">
+        <div class="c-routelist__filter-selector">
+          <i class="icon icon-mountain"></i>
+          Aventura
+          <i class="icon icon-arrow-right"></i>
+        </div>
+        <div class="c-routelist__filter-section-form">
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Quads</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Parapente</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Rating</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Explora</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Buceo</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Paracaidas</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Snowboard</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Surf</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <a href="/"> Ver 21 más</a>
+        </div>
+      </div>
+      <div class="c-routelist__filter-section">
+        <div class="c-routelist__filter-selector">
+          <i class="icon icon-house"></i>
+          Alojamiento
+          <i class="icon icon-arrow-right"></i>
+        </div>
+        <div class="c-routelist__filter-section-form">
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Quads</span>
+            <button #tooltip="matTooltip" matTooltip="Lorem ipsum" matTooltipPosition="above">
+              <i alt="info" class="icon icon-world"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Parapente</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Rating</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Explora</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Buceo</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Paracaidas</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Snowboard</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <div class="c-routelist__filter-section-input">
+            <input type="checkbox" name="" id="" />
+            <span> Surf</span>
+            <button
+              class="c-routelist__filter-section-input-info"
+              #tooltip="matTooltip"
+              matTooltip="Lorem ipsum"
+              matTooltipPosition="above"
+            >
+              <i alt="info" class="icon icon-info"></i>
+            </button>
+          </div>
+          <a href="/"> Ver 21 más</a>
+        </div>
+      </div>
+      <div class="c-routelist__filter-section active">
+        <div class="c-routelist__filter-selector">
+          <i class="icon icon-tag"></i>
+          Precio
+          <i class="icon icon-arrow-right"></i>
+        </div>
+        <div class="c-routelist__filter-section-form">
+          <div class="c-routelist__filter-section-input bg-basic-000-white">
+            <i class="icon icon-tag"></i>
+            <input type="number" placeholder="Mínimo" name="min-price" id="" />
+          </div>
+          <div class="c-routelist__filter-section-input bg-basic-000-white">
+            <i class="icon icon-tag"></i>
+            <input type="number" placeholder="Máximo" name="max-price" id="" />
+          </div>
+        </div>
+      </div>
+    </form>
+  </aside>
+  <p class="c-routelist__section-title lg:col-start-2 col-start-1 lg:col-span-3 col-span-full">
+    Asia
+  </p>
+  <c-routecard></c-routecard>
+  <c-routecard></c-routecard>
+  <c-routecard></c-routecard>
+  <p class="c-routelist__section-title lg:col-span-3 col-span-full">Asia</p>
+  <c-routecard></c-routecard>
+  <c-routecard></c-routecard>
+  <c-routecard></c-routecard>
+  <c-routecard></c-routecard>
+  <c-routecard></c-routecard>
+  <c-routecard></c-routecard>
+</section>

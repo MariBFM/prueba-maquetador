@@ -1,0 +1,321 @@
+@use 'tailwindcss';
+@use '@angular/material' as mat;
+
+// Variables
+
+//Fonts
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 200 800;
+  font-stretch: 75% 125%;
+}
+@font-face {
+  font-family: 'Syne';
+  src: url('./assets/fonts/Syne/Syne-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 200 800;
+  font-stretch: 75% 125%;
+}
+
+:root {
+  @include mat.tooltip-overrides(
+    (
+      container-color: #ffffff,
+      supporting-text-color: #342e34,
+    )
+  );
+  /* Transparencias corregidas a sintaxis CSS nativa */
+  --color-basic-000-white-high-alpha: rgba(255, 255, 255, 0.72);
+  --color-basic-000-basic-medium-alpha: rgba(129, 119, 129, 0.5);
+  --color-basic-000-white: #ffffff;
+  --color-basic-050: #f8f7f8;
+  --color-basic-100: #e0d9e0;
+  --color-basic-200: #d1c7d1;
+  --color-basic-300: #bfb0be;
+  --color-basic-400: #a0989f;
+  --color-basic-500: #817781;
+  --color-basic-600: #635a63;
+  --color-basic-700: #494149;
+  --color-basic-800: #342e34;
+  --color-basic-900: #2d242d;
+
+  --color-primary-low-alpha: rgba(98, 47, 96, 0.32);
+  --color-primary-050: #f5eaf5;
+  --color-primary-100: #e0c8df;
+  --color-primary-200: #d9bad8;
+  --color-primary-300: #c69ac4;
+  --color-primary-400: #b677b3;
+  --color-primary-500: #ac53a9;
+  --color-primary-600: #864084;
+  --color-primary-700: #622f60; /* Primary */
+  --color-primary-800: #471f45;
+  --color-primary-900: #2b132a;
+
+  --color-secondary-050: #fbf6f4;
+  --color-secondary-100: #f4e8e1;
+  --color-secondary-200: #ffe1d1;
+  --color-secondary-300: #ffbc99;
+  --color-secondary-400: #ff8f50; /* Secondary */
+  --color-secondary-500: #d67843;
+  --color-secondary-600: #b85c28;
+  --color-secondary-700: #8a451e;
+  --color-secondary-800: #4e250e;
+  --color-secondary-900: #31190c;
+
+  --font-title: 'Syne', sans-serif;
+  --font-text: 'Nunito', sans-serif;
+}
+@theme {
+  --breakpoint-lg: 1440px;
+  --breakpoint-md: 1024px;
+  --breakpoint-sm: 745px;
+  /* Transparencias corregidas a sintaxis CSS nativa */
+  --color-basic-000-white-high-alpha: rgba(255, 255, 255, 0.72);
+  --color-basic-000-basic-medium-alpha: rgba(129, 119, 129, 0.5);
+  --color-basic-000-white: #ffffff;
+  --color-basic-050: #f8f7f8;
+  --color-basic-100: #e0d9e0;
+  --color-basic-200: #d1c7d1;
+  --color-basic-300: #bfb0be;
+  --color-basic-400: #a0989f;
+  --color-basic-500: #817781;
+  --color-basic-600: #635a63;
+  --color-basic-700: #494149;
+  --color-basic-800: #342e34;
+  --color-basic-900: #2d242d;
+
+  --color-primary-low-alpha: rgba(98, 47, 96, 0.32);
+  --color-primary-050: #f5eaf5;
+  --color-primary-100: #e0c8df;
+  --color-primary-200: #d9bad8;
+  --color-primary-300: #c69ac4;
+  --color-primary-400: #b677b3;
+  --color-primary-500: #ac53a9;
+  --color-primary-600: #864084;
+  --color-primary-700: #622f60; /* Primary */
+  --color-primary-800: #471f45;
+  --color-primary-900: #2b132a;
+
+  --color-secondary-050: #fbf6f4;
+  --color-secondary-100: #f4e8e1;
+  --color-secondary-200: #ffe1d1;
+  --color-secondary-300: #ffbc99;
+  --color-secondary-400: #ff8f50; /* Secondary */
+  --color-secondary-500: #d67843;
+  --color-secondary-600: #b85c28;
+  --color-secondary-700: #8a451e;
+  --color-secondary-800: #4e250e;
+  --color-secondary-900: #31190c;
+
+  --font-title: 'Syne', sans-serif;
+  --font-text: 'Nunito', sans-serif;
+}
+
+//icons
+
+.icon {
+  width: 24px;
+  height: 24px;
+  &::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    mask-size: contain;
+    mask-position: center !important;
+    mask-repeat: no-repeat !important;
+  }
+  &-arrow-left::before {
+    mask: url('/images/icons/left-arrow_icon.svg');
+  }
+  &-arrow-right::before {
+    mask: url('/images/icons/right-arrow_icon.svg');
+  }
+  &-house::before {
+    mask: url('/images/icons/house_icon.svg');
+  }
+  &-mountain::before {
+    mask: url('/images/icons/mountain_icon.svg');
+  }
+  &-world::before {
+    mask: url('/images/icons/world_icon.svg');
+  }
+  &-tag::before {
+    mask: url('/images/icons/tag_icon.svg');
+  }
+  &-menu::before {
+    mask: url('/images/icons/menu_icon.svg');
+  }
+  &-close::before {
+    mask: url('/images/icons/close_icon.svg');
+  }
+  &-info::before {
+    mask: url('/images/icons/info_icon.svg');
+  }
+  &-filters::before {
+    mask: url('/images/icons/filters_icon.svg');
+  }
+}
+
+// Layout
+app-layout {
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main {
+  display: block;
+  flex-grow: 1;
+  position: relative;
+}
+
+* {
+  font-family: var(--font-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+}
+
+// Forms
+input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  border-color: var(--color-primary-700);
+  accent-color: var(--color-secondary-500);
+}
+input {
+  max-width: 100%;
+  min-width: 1px;
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+mat-tooltip-component {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  .mat-mdc-tooltip-surface {
+    overflow: visible;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      mask-size: contain;
+      mask-position: center !important;
+      mask-repeat: no-repeat !important;
+      transform: translateX(-50%);
+      mask: url('/images/icons/triangle_icon.svg');
+      background-color: var(--color-basic-000-white);
+      width: 13px;
+      height: 9px;
+      display: inline-block;
+    }
+  }
+}
+
+//Dots
+.swiper-pagination-bullet {
+  border: 1px solid var(--color-basic-000-white);
+  background-color: var(--color-basic-000-white-high-alpha);
+  &-active {
+    background-color: var(--color-secondary-400);
+  }
+}
+
+// Buttons
+button,
+a {
+  &:not(:disabled) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.btn {
+  padding: 12px 40px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  font-weight: 600;
+  font-family: 'Nunito';
+  border: 1px solid;
+  border-radius: 208px;
+  width: fit-content;
+  &-primary {
+    background-color: var(--color-primary-700);
+    border-color: var(--color-primary-700);
+    color: var(--color-basic-000-white);
+    &:hover {
+      background-color: var(--color-primary-800);
+      border-color: var(--color-primary-800);
+    }
+    &:disabled {
+      background-color: var(--color-basic-400);
+      border-color: var(--color-basic-400);
+      color: var(--color-basic-600);
+    }
+    &--light {
+      background-color: var(--color-basic-000-white);
+      border-color: var(--color-primary-700);
+      color: var(--color-primary-700);
+      &:hover {
+        border-color: var(--color-primary-800);
+        color: var(--color-primary-800);
+      }
+      &:disabled {
+        border-color: var(--color-basic-500);
+        color: var(--color-basic-500);
+      }
+    }
+  }
+  &-secondary {
+    background-color: var(--color-secondary-400);
+    border-color: var(--color-secondary-400);
+    color: var(--color-secondary-800);
+    &:hover {
+      background-color: var(--color-secondary-500);
+      border-color: var(--color-secondary-500);
+      color: #57290f;
+    }
+    &:disabled {
+      background-color: var(--color-basic-500);
+      border-color: var(--color-basic-500);
+      color: var(--color-basic-700);
+    }
+  }
+  &-arrow {
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px;
+    .icon {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &-filters {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 8px 14px;
+    font-size: 20px;
+    line-height: 24px;
+    background-color: var(--color-secondary-050);
+    border-color: var(--color-basic-100);
+  }
+}

@@ -1,0 +1,19 @@
+.c-header {
+  &__wrapper {
+    gap: 8px;
+  }
+  &__title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 40px;
+    letter-spacing: 0%;
+  }
+  &__subtitle {
+    font-family: var(--font-text);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0%;
+  }
+}

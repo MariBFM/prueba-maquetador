@@ -1,0 +1,133 @@
+.c-routelist {
+  grid-template-rows: repeat(5, min-content);
+  .btn-filters {
+    margin-inline: auto;
+    .icon-filters::before {
+      background-color: #000;
+    }
+    @media (min-width: 1024px) {
+      margin-inline: 0px auto;
+    }
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+  &__filter {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    padding-inline: 24px;
+    &.open {
+      display: flex;
+    }
+    @media (min-width: 745px) {
+      position: absolute;
+      height: 100%;
+      padding-block: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      width: fit-content;
+      left: -100%;
+      transition: all 0.5s ease-out;
+      &.open {
+        left: 0px;
+      }
+    }
+    @media (min-width: 1440px) {
+      height: fit-content;
+      border-radius: 16px;
+      position: inherit;
+      width: fit-content;
+      box-shadow: none;
+      max-width: 100%;
+    }
+    &-title {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      padding-block: 35.5px;
+      border-bottom: 1px solid var(--color-basic-100);
+      display: flex;
+      justify-content: space-between;
+      .icon-close::before {
+        background-color: #000;
+      }
+    }
+    &-selector {
+      display: flex;
+      align-items: center;
+      padding-block: 12px;
+      gap: 8px;
+      .icon::before {
+        background-color: var(--color-basic-800);
+      }
+      .icon.icon-arrow-right {
+        margin-left: auto;
+      }
+    }
+    &-section {
+      &-form {
+        height: 0px;
+        overflow: hidden;
+        padding-inline: 16px;
+        &:has(input[type='number']) {
+          padding: 0px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+      }
+      &.active &-form {
+        height: fit-content;
+      }
+      &.active {
+        .c-routelist__filter-selector {
+          color: var(--color-secondary-600);
+          .icon::before {
+            background-color: var(--color-secondary-600);
+          }
+          .icon.icon-arrow-right {
+            transform: rotate(90deg);
+          }
+        }
+      }
+      &-input {
+        display: flex;
+        align-items: center;
+        padding-block: 12px;
+        gap: 8px;
+        &:has(input[type='number']) {
+          border: 1px solid var(--color-primary-700);
+          border-radius: 208px;
+          display: flex;
+          padding: 8px 12px;
+          .icon::before {
+            background-color: var(--color-primary-700);
+          }
+        }
+        &-info {
+          display: flex;
+          align-items: center;
+          .icon::before {
+            background-color: var(--color-basic-800);
+          }
+        }
+      }
+    }
+  }
+  &__section-title {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 0%;
+  }
+}

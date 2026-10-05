@@ -1,0 +1,67 @@
+<div class="c-routecard">
+  <div class="c-routecard__top">
+    <img
+      class="c-routecard__image"
+      src="/images/placeholders/card-image-01.jpg"
+      alt="Ruta por Australia imagen"
+    />
+    <span class="c-routecard__banner bg-secondary-400">Quads</span>
+  </div>
+  <div class="c-routecard__content">
+    <header class="c-routecard__header">
+      <p class="c-routecard__header-pretitle">
+        <span class="c-routecard__header-location text-primary-700">Marruecos, África</span
+        ><span class="c-routecard__header-time text-basic-800">9 días</span>
+      </p>
+      <p class="c-routecard__header-title">Descubre Bangkok con Iberojet</p>
+    </header>
+    <div class="c-routecard__footer bg-secondary-050">
+      <div class="c-routecard__info">
+        <span class="c-routecard__description">Desde</span>
+        <div class="c-routecard__price">
+          <span class="c-routecard__price-number">248,00</span>
+          <span class="c-routecard__price-currency">€</span>
+          <a class="c-routecard__moreinfo text-primary-700" role="button" (click)="openPopup()">
+            Ver desglose <i class="icon icon-arrow-right"></i>
+          </a>
+          <div class="c-routecard__popup bg-basic-000-white" [class.open]="isPopupOpen">
+            <header class="c-routecard__popup-header bg-secondary-050">
+              <p class="c-routecard__popup-header-text">Desglose de precios</p>
+              <button (click)="closePopup()"><i class="icon icon-close"></i></button>
+            </header>
+            <div class="c-routecard__popup-body">
+              <p class="c-routecard__popup-pretitle">
+                <span class="c-routecard__popup-location">Marruecos, África</span
+                ><span class="c-routecard__popup-time">9 días</span>
+              </p>
+              <div class="c-routecard__popup-taxes">
+                <div class="c-routecard__popup-tax">
+                  <div class="flex justify-between">
+                    <p>Precio antes de impuestos</p>
+                    <span class="c-routecard__popup-tax-number">1.124,00 €</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <p>Impuesto</p>
+                    <span class="c-routecard__popup-tax-number">4,43 €</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <p>Lorem ipsum</p>
+                    <span class="c-routecard__popup-tax-number">150,42 €</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer class="c-routecard__popup-footer bg-secondary-050 flex justify-between">
+              <p>Precio final</p>
+              <p>
+                <span>2.455,00</span>
+                <span>€</span>
+              </p>
+            </footer>
+          </div>
+        </div>
+      </div>
+      <a role="button" class="btn btn-primary--light" href="/">Reservar</a>
+    </div>
+  </div>
+</div>
